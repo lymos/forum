@@ -64,8 +64,52 @@ $this->beginPage();
 		</div>
 	</div>
 	<div class="col-sm-10 right">
+		<div class="nav-list" role="navgation">
+			<ul class="nav nav-tabs">
+				<li role="presentation" class="active"><a href="#">添加菜单</a></li>
+				<li role="presentation"><a href="#">会员管理</a></li>
+			</ul>
+		</div>
+		<div class="row action">
+			<div class="col-lg-6">
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-default">新建</button>
+					<button type="button" class="btn btn-default">删除</button>
+					<button type="button" class="btn btn-default">导出</button>
+				</div>
+			</div>
+			<div class="col-lg-6 form-inline">
+				<div class="form-group">
+					<label>关键字</label>
+					<input type="text" class="form-control">
+					<button class="btn btn-default">搜索</button>
+					<button class="btn btn-default">高级搜索</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 action">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>账号</th>
+							<th>密码</th>
+							<th>手机</th>
+							<th>添加日期</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>admin</td>
+							<td>123456</td>
+							<td>18909890786</td>
+							<td>2015-04-12 12:13:56</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 		
-		ffff
 	</div>
 </div>
 
