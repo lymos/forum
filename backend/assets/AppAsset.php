@@ -22,7 +22,8 @@ class AppAsset extends AssetBundle
 	'css/admin.css'
     ];
     public $js = [
-    	'js/bootstrap.js'
+    	'js/bootstrap.js',
+	'js/forumAdmin.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
