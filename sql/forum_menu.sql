@@ -3,6 +3,7 @@ drop table if exists forum_menu;
 create table forum_menu(
 	id 		integer unsigned not null auto_increment comment "id",
 	parent_id  	integer unsigned not null default 0 comment "parent id",
+	lang 		varchar(16) not null default 'zh-CN' comment "language",
 	name 		varchar(60) not null default '' comment "name",
 	sort 		integer unsigned not null default 0 comment "sort",
 	template_name 	varchar(80) not null default '' comment "模板文件名",
@@ -15,6 +16,7 @@ create table forum_menu(
 	insert_time 	int(11) not null default 0 comment "添加时间",
 
 	primary key(id)
-)ENGINE=MyISAM auto_increment=0 default charset=utf8;
+)ENGINE=MyISAM default charset=utf8;
 
-
+insert into forum_menu (id, parent_id, name, insert_time) values (1, 0, '系统设置', now()); 
+insert into forum_menu (id, parent_id, name, insert_time) values (2, 1, '菜单管理', now()); 
