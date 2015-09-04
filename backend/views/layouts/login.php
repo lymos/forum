@@ -54,7 +54,7 @@ $this->beginPage();
 <footer class="footer">
 	<div class="container">
 		<p class="pull-left">&copy; Lymos Forum <?= date('Y') ?></p>
-		<p class="pull-right"><?= Yii::powered() ?></p>
+		<p class="pull-right">LYMOS &copy;copyright</p>
 	</div>
 </footer>
 <?php $this->endBody(); ?>

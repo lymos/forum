@@ -19,7 +19,7 @@ $this->title = 'Welcome To Login Admin';
 			<?php $form = ActiveForm::begin(['id' => 'form-login', 'layout' => 'horizontal', 'action' => 'index.php?r=login/login']); ?>
 				<?= $form->field($model, 'username') ?>
 				<?= $form->field($model, 'password')->passwordInput()  ?>
-				<?= $form->field($model, 'captcha') ?>
+				<?= $form->field($model, 'captcha')->widget(yii\captcha\Captcha::className(), ['captchaAction' => 'login/captcha']) ?>
 				<?= $form->field($model, 'rememberme')->checkbox() ?>
 				<div class="form-group">
 					<label class="col-sm-offset-4"></label>

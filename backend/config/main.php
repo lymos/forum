@@ -29,6 +29,13 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+	'db' => [
+		'class' => 'yii\db\Connection',
+		'dns' => 'mysql:host=localhost;dbname=forum_db',
+		'username' => 'root',
+		'password' => 'root',
+		'charset' => 'utf8'
+	]
     ],
     'params' => $params,
 ];

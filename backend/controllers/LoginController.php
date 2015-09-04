@@ -11,6 +11,16 @@ use backend\models\AccountModel;
 class LoginController extends Controller{
 
 	public $layout = 'login';
+
+	public function actions(){
+		return [
+			// 验证码
+			'captcha' => [
+				'class' => 'yii\captcha\CaptchaAction',
+			//	'height' => 60,
+			]
+		];
+	}
 	
 	public function actionIndex(){
 		$account_model = new AccountModel();
