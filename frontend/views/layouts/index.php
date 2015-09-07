@@ -39,6 +39,30 @@ $this->beginPage();
 		]);	
 		NavBar::end();
 	?>
+	<div class="row" style="padding-left: 100px">
+		<ul class="nav nav-pills">
+			<li class="active"><a href="#">资讯大全</a></li>
+			<li><a href="#">自学成才</a></li>
+			<li><a href="#">教学视频</a></li>
+			<li><a href="#">资源下载</a></li>
+			<li><a href="#">论坛</a></li>
+		</ul>
+	</div>
+	<div class="row">
+		<div class="col-sm-8">
+		<div class="panel">
+			<div class="panel-header">
+				header
+			</div>
+			<div class="panel-body">
+				body
+			</body>
+		</div>
+		</div>
+		<div class="col-sm-4">
+		</div>
+	</div>
+		
 	<div class="container">
 		<?= $content // 页面中间的内容?>
 	</div>
