@@ -1,7 +1,7 @@
 # table forum_menu 菜单表
 drop table if exists forum_menu;
 create table forum_menu(
-	id 		integer unsigned not null auto_increment comment "id",
+	menu_id 		integer unsigned not null auto_increment comment "id",
 	parent_id  	integer unsigned not null default 0 comment "parent id",
 	lang 		varchar(16) not null default 'zh-CN' comment "language",
 	name 		varchar(60) not null default '' comment "name",
@@ -15,8 +15,8 @@ create table forum_menu(
 	update_time 	int(11) not null default 0 comment "更新时间",
 	insert_time 	int(11) not null default 0 comment "添加时间",
 
-	primary key(id)
+	primary key(menu_id)
 )ENGINE=MyISAM default charset=utf8;
 
-insert into forum_menu (id, parent_id, name, insert_time) values (1, 0, '系统设置', now()); 
-insert into forum_menu (id, parent_id, name, insert_time) values (2, 1, '菜单管理', now()); 
+insert into forum_menu (menu_id, parent_id, name, insert_time) values (1, 0, '系统设置', now()); 
+insert into forum_menu (menu_id, parent_id, name, insert_time) values (2, 1, '菜单管理', now()); 

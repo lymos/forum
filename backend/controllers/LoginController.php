@@ -27,8 +27,19 @@ class LoginController extends Controller{
 		return $this->render('login', ['model' => $account_model]);
 	}
 
+	/**
+	 * do login
+	 */
 	public function actionLogin(){
 		$params = Yii::$app->request->post();
+		$account_model = new AccountModel();
+
+		$login_status = $account_model->login($params);
+		if($login_status){
+			echo 'login success';
+		}else{
+			echo 'failed';
+		}
 	}
 }
 ?>

@@ -31,7 +31,7 @@ return [
         ],
 	'db' => [
 		'class' => 'yii\db\Connection',
-		'dns' => 'mysql:host=localhost;dbname=forum_db',
+		'dsn' => 'mysql:host=localhost;dbname=forum_db',
 		'username' => 'root',
 		'password' => 'root',
 		'charset' => 'utf8'

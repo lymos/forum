@@ -1,0 +1,24 @@
+/* frontend index css */
+.page-left{
+	padding-left: 100px;
+}
+
+.page-left-col{
+	padding-left: 85px;
+}
+
+.padd-top{
+	margin-top: 20px;
+}
+
+.friend-link a{
+	color: #666;
+}
+
+.footer{
+	text-align: center;
+}
+
+.footer p, .footer a{
+	color: #616161;
+}

@@ -19,7 +19,12 @@ class AccountModel extends Model{
 	*/
 	public function login($params = array()){
 		$db = Yii::$app->db;
-		$sql = 'select name from forum_account where name="'.$params['name'].'" and password = "'.$params['password'].'" limit 1';
+		// validate
+		if(! $this->load($params) && ! $this->validate()){
+			return false;
+		}
+		
+		$sql = 'select username from forum_account where username="'.$params['AccountModel']['username'].'" and password = "'.md5($params['AccountModel']['password']).'" limit 1';
 		$command = $db->createCommand($sql);
 		$data = $command->queryOne();
 		if($data){

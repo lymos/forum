@@ -1,6 +1,0 @@
-<?php
-/**
-* admin login page
-*/
-
-?>

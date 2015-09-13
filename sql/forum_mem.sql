@@ -1,7 +1,7 @@
 # table forum_mem 会员表
 drop table if exists forum_mem;
 create table forum_mem(
-	id 		integer unsigned not null auto_increment comment "id",
+	mem_id 		integer unsigned not null auto_increment comment "id",
 	account 	varchar(60) not null default '' comment "账号",
 	nick_name 	varchar(60) not null default '' comment "昵称",
 	email 		varchar(80) not null default '' comment "email",
@@ -19,7 +19,7 @@ create table forum_mem(
 	update_time 	int(11) not null default 0 comment "更新时间",
 	insert_time 	int(11) not null default 0 comment "添加时间",
 
-	primary key(id),
+	primary key(mem_id),
 	unique key(account),
 	key key_nick_name(nick_name)
 )ENGINE=InnoDB default charset=utf8;
