@@ -24,10 +24,20 @@ class AccountModel extends Model{
 			return false;
 		}
 		
-		$sql = 'select username from forum_account where username="'.$params['AccountModel']['username'].'" and password = "'.md5($params['AccountModel']['password']).'" limit 1';
+		$model_name = getClassName(get_class($this));
+		$data = $params[$model_name];
+
+		if(! $data['captcha'] || $data['captcha'] != getSession('__captcha/login/captcha')){
+			//showMessage('验证码错误!');
+			return false;
+		}
+		
+		$sql = 'select username from forum_account where username="'.$data['username'].
+			'" and password = "'.md5($data['password']).'" limit 1';
 		$command = $db->createCommand($sql);
 		$data = $command->queryOne();
 		if($data){
+			setSession('username', $data['username']);
 			return true;
 		}else{
 			return false;

@@ -36,9 +36,11 @@ class LoginController extends Controller{
 
 		$login_status = $account_model->login($params);
 		if($login_status){
-			echo 'login success';
+			//showMessage('登录成功!');
+			return $this->redirect('index.php?r=index');
 		}else{
-			echo 'failed';
+			//showMessage('登录失败,账号或密码错误!');
+			return $this->redirect('index.php?r=login');
 		}
 	}
 }
