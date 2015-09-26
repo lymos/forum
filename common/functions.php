@@ -35,3 +35,8 @@ function getClassName($class){
 	}
 	return $class;
 }
+
+function d($msg){
+	$file = dirname(dirname(__FILE__)).'/temp/debug.log';
+	return error_log(print_r($msg, 1)."\n", 3, $file);
+}

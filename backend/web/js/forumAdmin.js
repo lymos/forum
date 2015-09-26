@@ -22,6 +22,33 @@ admin.prototype.bindMenuClick = function(){
 };
 
 /**
+ * bind form submit class
+ */
+admin.prototype.bindSubmitClick = function(){
+	var form = $(this).parents('form');
+	var action = form.attr('action');
+	var method = form.attr('method') ? form.attr('method').toUpperCase() : '';
+	var form_data = form.serialize();
+	if(method == 'GET'){
+		$.getJSON(action, form_data, admin.submitCallback);
+	}else if(method == 'POST' || ! method){
+		$.ajax({
+			url: action,
+			type: method,
+			data: form_data,
+			success: admin.submitCallback
+		});
+	}
+}
+
+/**
+ * form after submit callback function
+ */
+admin.prototype.submitCallback = function(data){
+	log(data);
+}
+
+/**
 * load html content
 * @param controller Controller File Name
 * @param view View File Name
@@ -36,8 +63,12 @@ admin.prototype.loadHtml = function(controller, view, action, obj){
 		var obj = '.right .content';
 	}	
 	var url = this.config.base_url + controller + '/' + action;
-	$(obj).load(url, 'view=' + view);
+	$(obj).load(url, 'view=' + view, this.afterLoadHtml);
 };
+
+admin.prototype.afterLoadHtml = function(){
+	$('.submit').bind('click', A.bindSubmitClick);
+}
 
 function goToPage(view){
 }
@@ -50,4 +81,5 @@ function log(cont){
 $(document).ready(function(){
 	A = new admin();
 	$('.menu-item').bind('click', A.bindMenuClick);
+	//$('.submit').bind('click', A.bindSubmitClick);
 });

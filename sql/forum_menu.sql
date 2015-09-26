@@ -12,11 +12,12 @@ create table forum_menu(
 	lock_yn 	tinyint(1) not null default 0 comment "0=>not lock; 1=>lock",
 	
 
+	menu_comment 	varchar(1000) not null default '' comment "备注",
 	update_time 	int(11) not null default 0 comment "更新时间",
 	insert_time 	int(11) not null default 0 comment "添加时间",
 
 	primary key(menu_id)
 )ENGINE=MyISAM default charset=utf8;
 
-insert into forum_menu (menu_id, parent_id, name, insert_time) values (1, 0, '系统设置', now()); 
-insert into forum_menu (menu_id, parent_id, name, insert_time) values (2, 1, '菜单管理', now()); 
+insert into forum_menu (menu_id, parent_id, name, insert_time) values (1, 0, '系统设置', unix_timestamp()); 
+insert into forum_menu (menu_id, parent_id, name, insert_time) values (2, 1, '菜单管理', unix_timestamp()); 

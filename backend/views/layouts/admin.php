@@ -70,6 +70,7 @@ $this->beginPage();
 			</ul>
 		</div>
 		<div class="col-sm-10 content">
+			<!--
 			<div class="row action">
 				<div class="col-lg-6">
 					<div class="btn-group" role="group">
@@ -201,6 +202,7 @@ $this->beginPage();
 					</nav>		
 				</div>
 			</div>
+			-->
 		</div>
 	</div>
 </div>

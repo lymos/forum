@@ -1,0 +1,5 @@
+insert into {{%menu}} (parent_id,name,menu_comment) values (44444菜单添加 删�)
+insert into {{%menu}} (parent_id,name,menu_comment) values (44444菜单添加 删�)
+insert into {{%menu}} (parent_id,name,menu_comment) values (,44444,菜单添加 删除)
+insert into {{%menu}} (parent_id,name,menu_comment) values (,"44444","fffffff")
+insert into {{%menu}} (name,menu_comment) values ("44444","fffffff")

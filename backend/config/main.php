@@ -35,7 +35,8 @@ return [
 		'dsn' => 'mysql:host=localhost;dbname=forum_db',
 		'username' => 'root',
 		'password' => 'root',
-		'charset' => 'utf8'
+		'charset' => 'utf8',
+		'tablePrefix' => 'forum_'
 	]
     ],
     'params' => $params,

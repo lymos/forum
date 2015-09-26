@@ -1,13 +1,14 @@
-﻿<?php
+<?php
 /**
-* menu view
-*/
+* admin.php view common template
+*
+**/
 
-$action_url = 'http://localhost/forum/backend/web/index.php?r=menu/';
 ?>
 
-	<div class="row action">
-		<div class="col-lg-6">
+		<div class="col-sm-10 content">
+			<div class="row action">
+				<div class="col-lg-6">
 					<div class="btn-group" role="group">
 						<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-add-id">新建</button>
 						<button type="button" class="btn btn-default">删除</button>
@@ -31,12 +32,12 @@ $action_url = 'http://localhost/forum/backend/web/index.php?r=menu/';
 								<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
 								<h4 class="modal-title">菜单添加</h4>
 							</div>
-							<form class="form-horizontal" action="<?= $action_url.'add' ?>" method="post">
+							<form class="form-horizontal">
 								<div class="modal-body">
 									<div class="form-group">
 										<label class="col-sm-2 control-label">上级分类</label>
 										<div class="col-sm-6">
-											<select class="form-control" name="parent_id">
+											<select class="form-control" name="category">
 												<option value="">请选择一项</option>
 												<option value="1">系统设置</option>
 											</select>
@@ -51,13 +52,13 @@ $action_url = 'http://localhost/forum/backend/web/index.php?r=menu/';
 									<div class="form-group">
 										<label class="col-sm-2 control-label">备注：</label>
 										<div class="col-sm-6">
-											<textarea class="form-control" rows="3" name="menu_comment"></textarea>
+											<textarea class="form-control" rows="3" name="name"></textarea>
 										</div>
 									</div>
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-									<button type="button" class="btn btn-primary submit">添加</button>
+									<button type="button" class="btn btn-primary">添加</button>
 								</div>
 							</form>
 						</div>
@@ -96,7 +97,7 @@ $action_url = 'http://localhost/forum/backend/web/index.php?r=menu/';
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-									<button type="button" class="btn btn-primary submit">添加</button>
+									<button type="button" class="btn btn-primary">添加</button>
 								</div>
 							</form>
 						</div>
@@ -109,9 +110,9 @@ $action_url = 'http://localhost/forum/backend/web/index.php?r=menu/';
 						<thead>
 							<tr>
 								<th><input type="checkbox" name="checkbox"></th>
-								<th>序号</th></th>
-								<th>名称</th>
-								<th>级别</th>
+								<th>账号</th>
+								<th>密码</th>
+								<th>手机</th>
 								<th>添加日期</th>
 								<th>操作</th>
 							</tr>
@@ -119,9 +120,9 @@ $action_url = 'http://localhost/forum/backend/web/index.php?r=menu/';
 						<tbody>
 							<tr>
 								<td><input type="checkbox" name="id[]"></td>
-								<td>1</td>
-								<td>菜单管理</td>
-								<td>二级</td>
+								<td>admin</td>
+								<td>123456</td>
+								<td>18909890786</td>
 								<td>2015-04-12 12:13:56</td>
 								<td><a data-target="#modal-update-id" data-toggle="modal" href="#">编辑</a>&nbsp;&nbsp;<a href="#">删除</a></td>
 							</tr>
@@ -137,3 +138,6 @@ $action_url = 'http://localhost/forum/backend/web/index.php?r=menu/';
 					</nav>		
 				</div>
 			</div>
+		</div>
+
+
